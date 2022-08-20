@@ -14,7 +14,7 @@ export class AppComponent {
     constructor(private user:UserinfoService){
         this.user.getData().subscribe(
           userdata =>{
-            console.log(userdata)
+            // console.log(userdata)
             this.userinfodata = userdata
           }
         )
