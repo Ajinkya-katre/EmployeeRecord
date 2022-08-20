@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-3">
+        <div class="search-hero">
+            <input type="text" class="form-control" name="search" [(ngModel)]="searchText" placeholder="Search By First Name, Last Name">
+        </div>
+    </div>
+    </div>
+
+    <div class="row mt-3">
+        <table class="table table-striped table-responsive table-hover">
+            <thead class="thead-dark">
+             <tr>
+                <th>Id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Job title</th>
+                <th>Salary</th>
+                <th>Joining Date</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr *ngFor = "let emp of employees | filter:searchText">
+                <td>{{emp.id}}</td>
+                <td>{{emp.firstname}}</td>
+                <td>{{emp.lastname}}</td>
+                <td>{{emp.jobtitle}}</td>
+                <td>{{emp.salary}}</td>
+                <td>{{emp.dataOfJoining}}</td>
+
+             </tr>   
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<router-outlet></router-outlet>
