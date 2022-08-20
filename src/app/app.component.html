@@ -2,6 +2,23 @@
     <!-- <app-navbar></app-navbar> -->
     <!-- <app-hero-section></app-hero-section> -->
     <!-- <app-tables></app-tables> -->
-    
+    <div class="container">
+
+        <table class="table table-bordered table-striped table-hover ">
+            <thead>
+                <tr>
+                    <th>Movie Id</th>
+                    <th>Movie title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ud of userinfodata">
+                    <td>{{ud.id}}</td>
+                    <td>{{ud.title}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 <router-outlet></router-outlet>
 
