@@ -10,6 +10,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { TablesComponent } from './tables/tables.component';
 import { HttpClientModule }    from '@angular/common/http';
 import { UserServiceService } from './user-service.service';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { UserServiceService } from './user-service.service';
     AppRoutingModule,
     FormsModule,
     Ng2SearchPipeModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [UserServiceService],
   bootstrap: [AppComponent]

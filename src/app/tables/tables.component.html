@@ -21,7 +21,7 @@
              </tr>
             </thead>
             <tbody>
-             <tr *ngFor = "let emp of employees | filter:searchText">
+             <tr *ngFor = "let emp of employees | filter:searchText | paginate: { itemsPerPage: 5, currentPage: p} ">
                 <td>{{emp.id}}</td>
                 <td>{{emp.firstname}}</td>
                 <td>{{emp.lastname}}</td>
@@ -31,6 +31,7 @@
 
              </tr>   
             </tbody>
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
         </table>
 
     </div>
